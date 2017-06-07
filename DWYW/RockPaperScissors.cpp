@@ -1,19 +1,21 @@
-#include <iostream>
-#include <cstdlib>
+#include <iostream> // Input/output stream 
+#include <cstdlib> //For 'rand'
 #include <string>
 
 using namespace std;
 
 
 enum choice {rock, paper, scissors};
+
 string choices[] = {"rock", "paper", "scissors"};
 void compare(choice p1, choice com);
 
 
 string prompt;
+/*
 int p1_Score = 0; //Your score
 int com_Score = 0; //Opponent's score
-
+*/
 
 int main() {
 	cout << "Type 'r' for rock, 'p' for paper, or 's' for scissors." << endl;
@@ -30,6 +32,7 @@ int main() {
 	return 0;
 }
 
+//Compares your choice to opponent's choice.
 void compare(choice p1, choice com) {
 	if ((p1 == rock && com == scissors) 
 		|| (p1 == paper && com == rock)
