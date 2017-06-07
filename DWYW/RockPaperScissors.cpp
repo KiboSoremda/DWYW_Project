@@ -1,38 +1,34 @@
-#include <iostream> // Input/output stream 
-#include <cstdlib> //For 'rand'
+#include <iostream>
+#include <cstdlib>
 #include <string>
 
 using namespace std;
 
 
 enum choice {rock, paper, scissors};
-
 string choices[] = {"rock", "paper", "scissors"};
 void compare(choice p1, choice com);
 
-
 string prompt;
-/*
-int p1_Score = 0; //Your score
-int com_Score = 0; //Opponent's score
-*/
+
 
 int main() {
+
+	
 	cout << "Type 'r' for rock, 'p' for paper, or 's' for scissors." << endl;
 	cin >> prompt;
 	if(prompt == "r") {
-		compare(rock, choice(rand() % scissors + 1));
+		compare(rock, choice(rand() % scissors));
 	}
 	else if(prompt == "s") {
-		compare(scissors, choice(rand() % scissors + 1));
+		compare(scissors, choice(rand() % scissors));
 	}
 	else if(prompt == "p") {
-		compare(paper, choice(rand() % scissors + 1));
+		compare(paper, choice(rand() % scissors));
 	}
 	return 0;
 }
 
-//Compares your choice to opponent's choice.
 void compare(choice p1, choice com) {
 	if ((p1 == rock && com == scissors) 
 		|| (p1 == paper && com == rock)
