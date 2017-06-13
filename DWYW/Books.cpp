@@ -2,8 +2,9 @@
 Example of the usage of structures and unions.
 */
 
-
 #include <iostream>
+
+const int max_length = 20;
 
 using namespace std;
 
@@ -21,24 +22,24 @@ struct book {
 struct profile {
 	char * fName;
 	char * lName;
-	int age;
 	book favorite_book;
-
 
 };
 
 
 
 int main() {
-
+	
 	fav_Book.book_name = "The Alchemist";
 	fav_Book.book_author = "Paulo Coelho";
 	fav_Book.pages = 208;
-
-	profile me;
-	me.fName = "Kibo";
-	me.lName = "Soremda";
-	me.favorite_book = fav_Book;
+	
+	profile me = 
+	{
+		"Kibo",
+		"Soremda",
+		fav_Book
+	};
 	
 	cout << "Hi, my name is " << me.fName << " " << me.lName << endl;
 	cout << "My favorite book is: " << fav_Book.book_name << " by " << fav_Book.book_author << endl; //so far
