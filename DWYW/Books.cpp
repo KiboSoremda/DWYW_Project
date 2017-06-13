@@ -40,7 +40,7 @@ int main() {
 	me.lName = "Soremda";
 	me.favorite_book = fav_Book;
 	
-	cout << "Hi, my name is " << "Kibo" << endl;
+	cout << "Hi, my name is " << me.fName << " " << me.lName << endl;
 	cout << "My favorite book is: " << fav_Book.book_name << " by " << fav_Book.book_author << endl; //so far
 		
 
