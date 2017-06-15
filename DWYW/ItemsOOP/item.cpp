@@ -9,10 +9,10 @@ Item::Item(string s, double p) : item_name(s) {
 	price = p;	
 }
 
-Item Item::operator+ (const Item& item1) {
+Item Item::operator+ (const Item& i) {
 	Item temp;
-	temp.item_name = item1.item_name + " " + item_name;
-	temp.price = item1.price + price;
+	temp.item_name = item_name + " " + i.item_name;
+	temp.price = i.price + price;
 	return temp;
 }
 
